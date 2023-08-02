@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='background.css') }}">
+</head>
+<body>
+    <h1>Welcome to Tic-Tac-Toe!</h1>
+    <h2>This is on my resume now</h2>
+    <h3>https://www.linkedin.com/in/orestsison/</h3>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <!-- Add your grid layout here -->
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social-media">
+        <h2>Social Media</h2>
+        <button>GitHub</button>
+        <button>LinkedIn</button>
+        <!-- Add your interactive buttons here -->
+    </section>
+
+    <form id="player-names-form">
+        <label for="player-x-name">Team X Player Name:</label>
+        <input type="text" id="player-x-name" name="player-x-name" required>
+        <br>
+        <label for="player-o-name">Team O Player Name:</label>
+        <input type="text" id="player-o-name" name="player-o-name" required>
+        <br>
+        <input type="submit" value="Start Game">
+    </form>
+
+    <div id="tic-tac-toe-board">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>    
+    <button id="reset-button">Reset</button>
+    <script src="{{ url_for('static', filename='logic.js') }}"></script>
+</body>
+</html>
