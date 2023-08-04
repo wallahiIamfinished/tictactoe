@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='background.css') }}">
+</head>
+<nav id="navbar">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>  
+      <li><a href="/tictactoe">Tic-Tac-Toe</a></li>
+      <ul>
+        <li><a href="/leaderboard">Leaderboard</a></li>
+      </ul>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+</nav>
+<body>
+    <h1>Leaderboard</h1>
+    <div class="leaderboard-grid">
+        {% for player in leaderboard %}
+            <div class="leaderboard-item">
+                <div class="player-name">{{ player[0] }}</div>
+                <div class="player-score">{{ player[1] }}</div>
+            </div>
+        {% endfor %}
+    </div>
+    <h6>“Greatness is a transitory experience. It is never consistent. It depends in part upon the myth-making imagination of humankind. The person who experiences greatness must have a feeling for the myth he is in. He must reflect what is projected upon him. And he must have a strong sense of the sardonic. This is what uncouples him from belief in his own pretensions. The sardonic is all that permits him to move within himself. Without this quality, even occasional greatness will destroy a man.”</h6>
+    <h6> ― Frank Herbert, Dune</h6>
+</body>
+</html>
