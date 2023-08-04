@@ -1,50 +1,44 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Tic Tac Toe</title>
+    <title>YAKWTFGO</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='background.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
-<body>
-    <h1>Welcome to Tic-Tac-Toe!</h1>
-    <h2>This is on my resume now</h2>
-    <h3>https://www.linkedin.com/in/orestsison/</h3>
 
-    <!-- Education Section -->
+<nav id="navbar">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>  
+      <li><a href="/tictactoe">Tic-Tac-Toe</a></li>
+      <ul>
+        <li><a href="/leaderboard">Leaderboard</a></li>
+      </ul>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<body>
+    <h1>I am Orest Manuel Sison</h1>
     <section id="education">
         <h2>Education</h2>
-        <!-- Add your grid layout here -->
+        <div class="grid-container">
+          <div class="grid-item">Bachelor of Arts</div>
+          <div class="grid-item">Major: Political Science</div>
+          <div class="grid-item">Fordham University</div>
+          <div class="grid-item">Class of 2023</div>     
     </section>
-
-    <!-- Social Media Section -->
-    <section id="social-media">
-        <h2>Social Media</h2>
-        <button>GitHub</button>
-        <button>LinkedIn</button>
-        <!-- Add your interactive buttons here -->
-    </section>
-
-    <form id="player-names-form">
-        <label for="player-x-name">Team X Player Name:</label>
-        <input type="text" id="player-x-name" name="player-x-name" required>
-        <br>
-        <label for="player-o-name">Team O Player Name:</label>
-        <input type="text" id="player-o-name" name="player-o-name" required>
-        <br>
-        <input type="submit" value="Start Game">
-    </form>
-
-    <div id="tic-tac-toe-board">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-    </div>    
-    <button id="reset-button">Reset</button>
-    <script src="{{ url_for('static', filename='logic.js') }}"></script>
+   
+<section id="social-media">
+    <h2>Social Media</h2>
+    <a href="https://www.github.com/wallahiIamfinished" target="_blank">
+        <button><i class="fab fa-github"></i></button>
+    </a>
+    <a href="https://www.linkedin.com/in/orestsison" target="_blank">
+        <button><i class="fab fa-linkedin"></i></button>
+    </a>
+>
+</section>
+    <script src="menu.js"></script>
 </body>
 </html>
