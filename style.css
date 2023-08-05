@@ -1,0 +1,26 @@
+body {
+    font-family: 'Times New Roman';
+    padding: 20px;
+}
+
+.leaderboard-grid {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+}
+
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.player-name {
+    flex: 1;
+}
+
+.player-score {
+    min-width: 50px;
+    text-align: center;
+}
