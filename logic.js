@@ -16,7 +16,6 @@ let playerNames = {
     'O': ''
 };
 
-// Winning combinations
 const wins = [
     [0, 1, 2],
     [3, 4, 5],
@@ -28,7 +27,6 @@ const wins = [
     [2, 4, 6]
 ];
 
-// Check for a win
 function checkWin() {
     for (let i = 0; i < wins.length; i++) {
         const [a, b, c] = wins[i];
@@ -56,10 +54,9 @@ document.querySelectorAll('.cell').forEach((cell, i) => {
         if (!board[i]) {
             board[i] = currentPlayer;
             cell.textContent = currentPlayer;
-            cell.classList.add(currentPlayer.toLowerCase()); // Add the class to the cell
+            cell.classList.add(currentPlayer.toLowerCase()); 
             const winner = checkWin();
             if (winner) {
-                // Delay the reset of the board until after the win alert is dismissed
                 setTimeout(() => {
                     alert(`${playerNames[winner]} wins!`);
                     fetch('/leaderboard', {
@@ -77,12 +74,11 @@ document.querySelectorAll('.cell').forEach((cell, i) => {
                         updateLeaderboard();
                 })
                     .catch(error => console.error('Error:', error));
-                    // Reset the board
                     board = Array(9).fill(null);
                     currentPlayer = 'X';
                     document.querySelectorAll('.cell').forEach(cell => {
                         cell.textContent = '';
-                        cell.classList.remove('x', 'o'); // Remove the classes from the cell
+                        cell.classList.remove('x', 'o'); 
                     });
                 }, 0);
             }            
@@ -91,13 +87,10 @@ document.querySelectorAll('.cell').forEach((cell, i) => {
     });
 });
 
-
-// Get the leaderboard when the page loads
 window.addEventListener('load', () => {
     fetch('/leaderboard')
     .then(response => response.json())
     .then(leaderboard => {
-        // Display the leaderboard
         console.log('Leaderboard:', leaderboard);
     })
     .catch(error => console.error('Error:', error));
