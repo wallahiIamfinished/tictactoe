@@ -6,7 +6,43 @@
     margin: auto; 
     margin-top: 20px;
 }
-
+#navbar {
+    background-color: #333; 
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  #navbar li {
+    float: left;
+  }
+  
+  #navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  #navbar li a:hover {
+    background-color: #29127d;
+  }
+  
+  #navbar li ul {
+    display: none;
+  }
+  
+  #navbar li:hover ul {
+    display: block;
+    position: absolute;
+    background-color: #29127d;
+  }
+  
 
 .cell {
     width: 60px;
@@ -25,3 +61,91 @@
 .o {
     color: blue;
 }
+.fab.fa-github {
+    color: white;
+    background-color: black;
+}
+
+.fab.fa-linkedin {
+    color: white;
+    background-color: #0077b5;
+}
+.button {
+    font-size: 20px;
+    text-decoration: none;
+    margin: 5px;
+    padding: 15px 25px;
+    color: white;
+    background-color: #333;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .button:hover {
+    opacity: 0.7;
+  }
+  
+  .fab {
+    margin-right: 10px;
+  }
+
+  .grid-item {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+    width: 125px; 
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto; 
+    padding: 10px;
+  }
+  
+  .square-button {
+    width: 100px; 
+    height: 100px;
+    padding: 0; 
+  
+    background-color: white;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    border-radius: 10px; 
+  }
+  
+  .square-button.github {
+    background-image: url('/static/github.png');
+  }
+  
+  .square-button.linkedin {
+    background-image: url('/static/linkedin.png'); 
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; 
+  }
+  
+  .grid-container2 {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+  }
+  
+  .grid-item2 {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+    width: 125px;
+  }
+  
